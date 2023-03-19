@@ -10,13 +10,13 @@
     
 }
 .container .wrapper h2 {
-    font-family: var(--poppins-font);
+    font-family:  'Poppins', sans-serif;
     font-weight: 700;
     font-size: 20.4px;
 }
 
 .container .wrapper p{
-    font-family: var(--poppins-font);
+    font-family:  'Poppins', sans-serif;
     font-size: 14.18px;
     font-weight: 400;
     color: var(--color-font);

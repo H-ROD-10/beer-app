@@ -1,5 +1,7 @@
-import { ChangeEvent, MouseEvent, useEffect, useState } from 'react'
+import { ChangeEvent,  useEffect, useState } from 'react'
 import { GetStaticProps } from 'next'
+import fs from 'fs';
+import path from 'path';
 
 import { FlotingButtonFilter } from '@/components/floatingButtonFilter'
 import { ListProducts } from '@/components/listProducts/ListProducts'
@@ -11,6 +13,7 @@ import { WineRedirect } from '@/components/wineRedirect'
 import { IProduct, IProducts } from '@/interface/IProduct'
 import { Modal } from '@/components/modal/Modal'
 import { Filter } from '@/components/filter'
+
 
 
 
@@ -107,9 +110,13 @@ export default function Home({data}: IProps) {
 
 export const getStaticProps:GetStaticProps<{ data: IProducts }> = async () => {
 
-  const response = await fetch('http://localhost:3000/api/products')
+  const filePath = path.join(process.cwd(), 'data', 'products.json');
 
-  const data: IProducts = await response.json()
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+
+
+  const data = JSON.parse(fileContent);
+
 
   return{
     props:{

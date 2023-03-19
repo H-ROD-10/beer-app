@@ -1,6 +1,5 @@
 import React, { ChangeEvent, MouseEvent } from 'react'
 import styles from './Filter.module.css'
-import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 
 interface IProps {
@@ -11,18 +10,12 @@ interface IProps {
 }
 
 
-const poppins = Poppins({
-    variable: '--poppins-font',
-    weight: ['700', '400'],
-    style: ['normal'],
-    subsets: ['latin'],
-  })
 
 export const Filter = ({cleanFilter, selectedFilters, handleChange, handleClick}: IProps) => {
   return (
     <>
     <form className={styles.container}>
-        <div className={poppins.variable}>
+        <div>
            <div className={styles.wrapper}>
              <h2>Filtros</h2>
            </div>
