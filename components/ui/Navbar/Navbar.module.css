@@ -1,0 +1,53 @@
+.container{
+    width: 100vw;
+    height: 70px;
+    background-color: #0F0F0F;
+    padding: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.container .menu_logo_search_cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    max-width: 120px;
+    position: relative
+}
+
+.container .menu_logo_search_cart .count{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    
+}
+@media screen and (min-width: 540px){
+    .container .menu_logo_search_cart{
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+    .container .menu_logo_search_cart .count{
+        top: -10px;
+        right: 20px;
+        
+    }
+}
+
